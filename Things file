@@ -1,0 +1,9 @@
+Bridge mysensors:bridge-mqtt:gateway [ brokerName="mosquitto", topicPublish="mygateway1-in", topicSubscribe="mygateway1-out", startupCheckEnabled=false, tcpPort=1883, sendDelay=200, imperial=true ] {
+//Outdoor temp and humidity is temp02 and hum02. Indoor is MBR_Temp and MBR Hum
+
+    humidity            hum02                [ nodeId=2,  childId=0 ]
+    temperature         temp02               [ nodeId=2,  childId=1 ]
+    light               hmdif01              [ nodeId=31, childId=1 ]
+    humidity            MBR_Hum              [ nodeId=3,  childId=0 ]
+    temperature         MBR_Temp             [ nodeId=3,  childId=1 ]
+}
