@@ -1,0 +1,37 @@
+
+rule "Indoor humidity target"
+// This Openhab2 rule sets a targeted indoor humidity based on outdoor temperature. 
+// Outdoor temp (F)               -10    0   10    20    30    50    60 
+// Target indoor humidity (%)   20    25   30   35    40    45    50    10
+// By setting the indoor humidity to 10% when the outdoor temp is 60 or above, the humidifier will not turn on.
+//  This is because the indoor humidity is over 10% already. 
+
+when
+    Item mysensors_humidity_gateway_hum01_hum changed or
+
+then
+    if( mysensors_temperature_gateway_temp02_temp.state <=-10 ) {
+        TargetIndoorHumidity.sendCommand(20)
+    }
+    if( mysensors_temperature_gateway_temp02_temp.state >-10 && mysensors_temperature_gateway_temp02_temp.state <=0 ) {
+        TargetIndoorHumidity.sendCommand(25)
+    }
+    if( mysensors_temperature_gateway_temp02_temp.state >0 && mysensors_temperature_gateway_temp02_temp.state <=10 ) {
+        TargetIndoorHumidity.sendCommand(30)
+    }
+    if( mysensors_temperature_gateway_temp02_temp.state >10 && mysensors_temperature_gateway_temp02_temp.state <=20 ) {
+        TargetIndoorHumidity.sendCommand(35)
+    }
+    if( mysensors_temperature_gateway_temp02_temp.state >20 && mysensors_temperature_gateway_temp02_temp.state <=30 ) {
+        TargetIndoorHumidity.sendCommand(40)
+    }
+    if( mysensors_temperature_gateway_temp02_temp.state >30 && mysensors_temperature_gateway_temp02_temp.state <=50 ) {
+        TargetIndoorHumidity.sendCommand(45)
+    }
+    if( mysensors_temperature_gateway_temp02_temp.state >50 && mysensors_temperature_gateway_temp02_temp.state <=60 ) {
+        TargetIndoorHumidity.sendCommand(50)
+    }
+    if( mysensors_temperature_gateway_temp02_temp.state >60) {
+        TargetIndoorHumidity.sendCommand(10)
+    }
+end
