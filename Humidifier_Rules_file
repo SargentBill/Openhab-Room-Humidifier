@@ -1,0 +1,18 @@
+
+ rule "Humidifier on off rules"
+ 
+// when indoor humidity changed
+ when 
+        System started or
+        Item mysensors_humidity_gateway_MBR_Hum_hum changed or
+       
+ then
+ 
+//If target humidity is below current humidity, turn on humidifier. Else, turn off. The target humidity is set
+//by a different rule.
+
+        if (mysensors_humidity_gateway_MBR_Hum_hum.state < TargetIndoorHumidity.state) {
+                mysensors_light_gateway_light_31_1_status.sendCommand(ON)
+        }
+        else {mysensors_light_gateway_light_31_1_status.sendCommand(OFF)
+        }
