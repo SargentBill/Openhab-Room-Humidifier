@@ -1,6 +1,6 @@
 Bridge mysensors:bridge-mqtt:gateway [ brokerName="mosquitto", topicPublish="mygateway1-in", topicSubscribe="mygateway1-out", startupCheckEnabled=false, tcpPort=1883, sendDelay=200, imperial=true ] {
 //Outdoor temp and humidity is temp02 and hum02. Indoor is MBR_Temp and MBR Hum.  "Light" in the context of MySensors is a relay (on/off switch).
-//In this situation, I am not controlling a light, but a humidifier
+//In this situation, I am not controlling a light, but a humidifier.
 
     humidity            hum02                [ nodeId=2,  childId=0 ]
     temperature         temp02               [ nodeId=2,  childId=1 ]
