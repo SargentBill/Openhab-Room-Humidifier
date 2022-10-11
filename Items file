@@ -1,0 +1,10 @@
+//DataType      UniqueName     "labeltext [stateformat]"   (group)  <iconname>    {channel/bindingconfig}
+Number          hum02       "Humidity2 [%.1f %%]"       <humidity>     {mqtt="<[mysensors:mygateway1-out/2/0/1/0/1:state:default]"}
+Number          temp02     "Temperature2 [%.0f °F]"      <temperature>     {mqtt="<[mysensors:mygateway1-out/2/1/1/0/0:state:default]"}
+Switch          hmdif01       "White Humifier"    <switch>   {mqtt=">[mysensors:mygateway1-in/31/1/1/0/2:command:ON:1],>[mysensors:mygateway1-in/31/1/1/0/2:command:OFF:0],<[mysensors:mygateway1-out/31/1/1/0/2:state:ON:1],<[mysensors:mygateway1-out/31/1/1/0/2:state:OFF:0]"}
+Number          MBR_Hum     "MBR Humidity [%.1f %%] " <humidity> {mqtt="<[mysensors:mygateway1-out/3/0/1/0/1:state:default]"}
+Number          MBR_Temp   "MBR Temperature [%.1f °F]"     <temperature> {mqtt="<[mysensors:mygateway1-out/3/1/1/0/0:state:default]"}
+
+//Values
+Number          TargetIndoorHumidity
+
