@@ -7,7 +7,7 @@ rule "Indoor humidity target"
 //  This is because the indoor humidity is over 10% already. 
 
 when
-    Item mysensors_humidity_gateway_hum01_hum changed or
+    Item mysensors_humidity_gateway_hum02_hum changed 
 
 then
     if( mysensors_temperature_gateway_temp02_temp.state <=-10 ) {
