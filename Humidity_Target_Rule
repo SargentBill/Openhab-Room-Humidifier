@@ -3,7 +3,7 @@ rule "Indoor humidity target"
 // This Openhab2 rule sets a targeted indoor humidity based on outdoor temperature. 
 // Outdoor temp (F)               -10    0   10    20    30    50    60 
 // Target indoor humidity (%)   20    25   30   35    40    45    50    10
-// By setting the indoor humidity to 10% when the outdoor temp is 60 or above, the humidifier will not turn on.
+// By setting the target indoor humidity to 10% when the outdoor temp is 60 or above, the humidifier will not turn on.
 //  This is because the indoor humidity is over 10% already. 
 
 when
