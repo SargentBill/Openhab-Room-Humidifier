@@ -7,7 +7,7 @@ Raspberry Pi running Openhab (an open source home automation program)
 Arduino Unos or equivalent (I used Arduino Nano with a Nano IO shield, which included a socket for an NRF24L01 radio module)  
 Arduino Mega 2560 with W5100 ethernet shield  
 Power supplies for Arduino and Raspberry Pi  
-Relays rated for mains voltage  
+Relays rated for mains voltage (I used a solid state relay activated by 3-32 VDC)
 NRF24L01 radio modules  
 Wire, solder, shrink tubing, misc. electronic parts.  
 
@@ -30,10 +30,15 @@ water (and eventually mold) to collect within the walls. HVAC professionals reco
 the exterior temperature decreases in order to reduce the difference between indoor and outdoor humidity.
 
 Proper ajustment of indoor humidity therefor requires both indoor and outdoor temperature readings. This home automation project
-1) takes indoor and outdoor temperature readings from a DHT sensor
+1) takes indoor and outdoor temperature readings from DHT sensors
 2) takes indoor humidity readings from a DHT sensor
-3) calculates the recommended interior humidity level
+3) calculates the recommended interior humidity level based on outdoor temperature
 4) turns on a room humidifier if the humidity level is too low
 5) turns off the room humidifier when the recommended humidity level is reached.
 
 A complete description of hardware, Openhab, MQTT and MySensors setup is beyond the scope of this ReadMe. 
+
+## Relay with Nano and Power Supply
+Shown below: Project box containing solid state relay, 9v power supply, Arduino Nano, Nano IO board, and NRF24L01 radio module. The relay
+turns the humidifier on and off.
+
