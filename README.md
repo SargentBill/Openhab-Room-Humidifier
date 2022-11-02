@@ -40,5 +40,12 @@ A complete description of hardware, Openhab, MQTT and MySensors setup is beyond 
 
 ## Relay with Nano and Power Supply
 Shown below: Project box containing solid state relay, 9v power supply, Arduino Nano, Nano IO board, and NRF24L01 radio module. The relay
-turns the humidifier on and off.
+turns the humidifier on and off. Of note, an extension cord was cut in half to provide a plug and socket. The humidifier plugs into the
+socket end of the former extension cord. 
 
+![ProjectBox](/images/HmdfSwBox.JPG)
+
+## Schematic
+Shown below: Partial schematic for the Arduino Nano, SSR relay and power supply. Radio module NRF24L01 and Nano IO board not shown.
+
+![HmdfSwSchematic](/images/HmdfSwSchematic.png)
