@@ -22,6 +22,12 @@ ethernet cable to a network switch, to which the Raspberry Pi is also connected.
 through an MQTT protocol. Using this protocol, the Pi makes the data available to other nodes in the network that request it.
 The payload data is stored and updated by the Pi whenever it is sent by a node and sent whenever it is requested. 
 
+The brand-agnostic home automation program openHab reads the MQTT data from the sensors and applies user-established rules 
+to turn the humidifier on and off. openHab is run on the same Raspberry Pi that hosts the MQTT broker.  
+
+See openHab.org for setting up MQTT and rules. See http://www.mysensors.org/build/relay and 
+https://www.mysensors.org/build/humidity for MySensors integration.  
+
 ## Adjusting indoor humidity:
 In the winter, experts recommend maintaining about 50% humidity indoors. On very cold days, however, humidity might condense
 on interior windows and walls, and the difference in humidity between indoors and outdoors might cause humidity to migrate
