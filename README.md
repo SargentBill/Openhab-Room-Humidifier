@@ -2,14 +2,14 @@
 Activates and deactivates a room humidifier based on indoor humidity and outdoor temperature. 
 
 ## Hardware:
-Digital Temperature and Humidity sensors DHT22/AMC2302 or equivalent  
-Raspberry Pi running Openhab (an open source home automation program)  
-Arduino Unos or equivalent (I used Arduino Nano with a Nano IO shield, which included a socket for an NRF24L01 radio module)  
-Arduino Mega 2560 with W5100 ethernet shield  
-Power supplies for Arduino and Raspberry Pi  
-Relays rated for mains voltage (I used a solid state relay activated by 3-32 VDC)  
-NRF24L01 radio modules  
-Wire, solder, shrink tubing, misc. electronic parts.  
+- Digital Temperature and Humidity sensors DHT22/AMC2302 
+- Raspberry Pi running Openhab (an open source home automation program)  
+- Arduino Unos or equivalent (I used Arduino Nano with a Nano IO shield, which included a socket for an NRF24L01 radio module)  
+- Arduino Mega 2560 with W5100 ethernet shield  
+- Power supplies for Arduino and Raspberry Pi  
+- Relays rated for mains voltage (I used a solid state relay activated by 3-32 VDC)  
+- NRF24L01 radio modules  
+- Wire, solder, shrink tubing, misc. electronic parts.  
 
 ## Software:
 Openhab for Raspberry Pi (www.openhab.org)  
